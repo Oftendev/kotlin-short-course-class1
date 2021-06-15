@@ -2,7 +2,9 @@
  * возвращает наименьшее из трёх заданных чисел
  */
 fun min3(a: Int, b: Int, c: Int): Int {
-    return TODO()
+    var min: Int = if(a > b) b else a
+    min = if(min > c) c else min
+    return min
 }
 
 fun main() {

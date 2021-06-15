@@ -26,7 +26,7 @@ internal class Task4Test {
             +++++
             +   +
             +++++
-        """.trimIndent(), stream.toString().trim())
+        """.trimIndent(), stream.toString().trimIndent())
     }
 
 }

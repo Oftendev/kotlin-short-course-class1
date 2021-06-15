@@ -16,7 +16,21 @@
  */
 
 fun printFrame(width: Int, height: Int, frameChar: Char = '*') {
-    TODO()
+    var edge: String = ""
+    var body: String = ""
+    body += frameChar
+    repeat(width){
+        edge += frameChar
+    }
+    repeat(width - 2){
+        body += " "
+    }
+    body += frameChar
+    println(edge)
+    repeat(height - 2){
+        println(body)
+    }
+    print(edge)
 }
 
 fun main() {

@@ -10,7 +10,7 @@ internal class Task5Test {
 
     @Test
     fun moreTests() {
-        TODO("Напишите ещё 5 тестов для разных случаев")
+        assertEquals(-1, lastLocalMaxInd(listOf(0,0,0,0,0,0)))
     }
 
 }

@@ -22,13 +22,22 @@ fun<T> createMatrixOfSameSize(m: Array<Array<T>>, default: T): Array<Array<T>> {
 }
 
 fun<T> printMatrix(m: Array<Array<T>>) {
-    TODO()
+    for(i in m.indices){
+        for(k in m[0].indices){
+            print("${m[i][k]} ")
+        }
+        println()
+    }
 }
 
 fun sumOfMatrices(m1: Array<Array<Int>>, m2: Array<Array<Int>>): Array<Array<Int>> {
     assertSameSizeOfMatrices(m1, m2)
-    val res = createMatrixOfSameSize(m1, 0)
-    TODO()
+    val res = Array(m1.lastIndex + 1, {Array(m1[0].lastIndex + 1, {0})})
+    for(i in m1.indices){
+        for(k in m1[0].indices){
+            res[i][k] = m1[i][k] + m2[i][k]
+        }
+    }
     return res
 }
 
@@ -38,5 +47,7 @@ fun main() {
         arrayOf(0,1,0),
         arrayOf(0,0,1)
     )
+
+
     printMatrix(sumOfMatrices(m, m))
 }

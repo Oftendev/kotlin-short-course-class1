@@ -10,8 +10,16 @@
         println(numbers[idx])
  */
 
-fun lastLocalMaxInd(numbers: Collection<Int>): Int {
-    TODO()
+fun lastLocalMaxInd(numbers: List<Int>): Int {
+    var answer: Int = -1
+    for (idx in 0..numbers.lastIndex){
+         var l_n:Int = if (idx - 1 >= 0) idx - 1 else idx + 1
+         var r_n:Int = if (idx + 1 <= numbers.lastIndex) idx + 1 else idx - 1
+         if((numbers[idx] > numbers[l_n]) and (numbers[idx] > numbers[r_n])){
+             answer = idx
+         }
+     }
+    return answer
 }
 
 fun main(args: Array<String>) {
